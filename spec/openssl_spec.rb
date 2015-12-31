@@ -1,5 +1,5 @@
-describe Motion::OpenSSL do
-  it 'has a version number' do
-    Motion::OpenSSL::VERSION.should != nil
+describe 'OpenSSL' do
+  it 'exists' do
+    OpenSSL.should != nil
   end
 end

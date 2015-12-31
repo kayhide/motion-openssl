@@ -14,9 +14,12 @@ Gem::Specification.new do |spec|
   spec.homepage      = 'http://github.com/kayhide/motion-openssl'
   spec.license       = 'MIT'
 
-  spec.files         = ['README.md', *Dir['lib/**/*']]
+  spec.files         = ['README.md', *Dir['{lib,motion}/**/*']]
   spec.require_paths = ['lib']
 
+  spec.add_runtime_dependency 'motion_blender'
   spec.add_development_dependency 'bundler', '~> 1.10'
   spec.add_development_dependency 'rake', '~> 10.0'
+  spec.add_development_dependency 'motion-redgreen'
+  spec.add_development_dependency 'motion-stump'
 end

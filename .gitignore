@@ -7,3 +7,6 @@
 /pkg/
 /spec/reports/
 /tmp/
+
+/.repl_history
+/build/
