@@ -1,2 +1,1 @@
-module OpenSSL
-end
+require 'openssl/random'
