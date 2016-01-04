@@ -2,19 +2,37 @@
 
 OpenSSL library for RubyMotion.
 
+Currently, this has the minimum implementation to make SecureRandom available.
+
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this line to your RubyMotion application's Gemfile:
 
 ```ruby
 gem 'motion-openssl'
 ```
 
-That's it.
+Or for your gem, add this to .gemspec file:
+
+```ruby
+spec.add_runtime_dependency 'motion-openssl'
+```
+
+And `require` it in your gem loader:
+
+```ruby
+require 'motion-openssl'
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+pid = $$
+now = Time.now
+ary = [now.to_i, now.nsec, pid]
+OpenSSL::Random.random_add(ary.join(""), 0.0)
+OpenSSL::Random.random_bytes(n)
+```
 
 ## Development
 
